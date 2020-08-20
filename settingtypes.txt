@@ -1,0 +1,36 @@
+# Seconds between each update. Increase this number if load is too high.
+# When using Climate API, update interval will default to 2.0 s.
+auroras_update_interval (Update interval) float 1.5 0.5 5.0
+
+# Minimum Y-value for auroras to appear.
+auroras_height_min (Min. height) int -24 -31000 31000
+
+# Minimum heat for auroras. Actual value will be lower to allow for smooth transitions.
+auroras_heat_min (Min. heat) int 0 0 100
+
+# Maximum heat for auroras. Actual value will be higher to allow for smooth transitions.
+auroras_heat_max (Max. heat) int 25 0 100
+
+# Minimum humidity for auroras. Actual value will be lower to allow for smooth transitions.
+auroras_hum_min (Min. humidity) int 0 0 100
+
+# Maximum humidity for auroras. Actual value will be higher to allow for smooth transitions.
+auroras_hum_max (Max. humidity) int 100 0 100
+
+# Hex colors of auroras. Colors at the towards the beginning will be blended with the default sky.
+auroras_colors (Aurora colors) string #14cca1 #22e6b2 #33ffc6 #49f2ac #5ce673 #82f249 #6fd916 #a0f725 #c3ff19 #a9f73b #d2f230 #d3e043 #dd564b #d93648 #b3478e
+
+[Advanced]
+
+# Controls overall brightness during auroras. 0.175 is night, 1.0 is full daylight.
+auroras_day_night_ratio (Day/night ratio) float 0.25 0.0 1.0
+
+# Controls how quickly auroras change color. Higher values result in slower transitions.
+auroras_time_spread (Noise time spread) int 60 20 600
+
+# Minimum random noise value for auroras to appear, between -1 and 1.
+# Lower values result in more auroras and also slower color transitions.
+auroras_noise_threshold (Noise threshold) float -0.2 -1.0 0.9
+
+# Controls how smoothly auroras start/stop at biome transitions.
+auroras_biome_transition (Biome transition) int 5 1 50
