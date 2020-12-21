@@ -223,7 +223,7 @@ end
 
 function auroras.get_local_strength(pos)
     -- No auroras underground!
-    heightStrength = auroras.clamp(
+    local heightStrength = auroras.clamp(
             (pos.y - auroras.HEIGHT_MIN) / auroras.HEIGHT_TRANSITION, 0.0, 1.0)
 
     -- Avoid getting biome data if we don't have to.
