@@ -1,0 +1,26 @@
+%YAML 1.1
+# ^-- ATTN: [2019-12-31] If you use a later version, Github will fail
+#     with a bogus error message "You have an error in your yaml syntax".
+# -*- coding: UTF-8, tab-width: 4 -*-
+---
+
+on:
+    push:
+        branches:
+            -   '*'
+
+jobs:
+    job_check_lua_files:
+        runs-on: ubuntu-20.04
+        name: 'Check LUA files'
+        steps:
+            -   name: '[LUA] Check out the repo files'
+                uses: 'actions/checkout@v2'
+
+            -   name: '[LUA] Contemn stray globals'
+                uses: 'mk-pmb/ghaction-lua-contemn-stray-globals@experimental'
+
+
+
+
+...
