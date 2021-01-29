@@ -1,4 +1,5 @@
-auroras = {}
+local minetest = _G.minetest
+local auroras = {}
 
 --[[
     Various constants and defaults. Will be overridden by settings, if present.
@@ -155,7 +156,7 @@ function auroras.init_colors()
 
                 if tCol == nil then
                     minetest.log("error", "[auroras] Invalid hex color: " ..
-                            dump(hexCol) .. ". Using default colors.")
+                            _G.dump(hexCol) .. ". Using default colors.")
                     return
                 else
                     colors[idx] = tCol
@@ -191,7 +192,7 @@ end
 function auroras.init_noise()
     local params = auroras.NOISE_PARAMS
     params.seed = os.time()
-    auroras.noise = PerlinNoise(params)
+    auroras.noise = _G.PerlinNoise(params)
 end
 
 function auroras.get_noise(pos)
@@ -462,7 +463,7 @@ do
 
     -- If climate_api is enabled, register auroras as a weather.
     if auroras.USE_CLIMATE_API then
-        climate_api.register_weather("auroras:aurora",
+        _G.climate_api.register_weather("auroras:aurora",
                 auroras.climate_api_is_active,
                 auroras.climate_api_get_effects)
     end
