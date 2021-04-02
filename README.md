@@ -1,5 +1,7 @@
 # Auroras
 
+[![ContentDB](https://content.minetest.net/packages/random_geek/auroras/shields/downloads/)](https://content.minetest.net/packages/random_geek/auroras/)
+
 ![screenshot.png](screenshot.png)
 
 Auroras mod for Minetest. Adds northern/southern lights at night.
