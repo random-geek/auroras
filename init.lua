@@ -419,7 +419,7 @@ end
 
 function auroras.climate_api_is_active(params)
     if params.player then
-        pName = params.player:get_player_name()
+        local pName = params.player:get_player_name()
         if auroras.player_data[pName] and
                 auroras.player_data[pName].was_visible then
             return true
@@ -429,10 +429,10 @@ function auroras.climate_api_is_active(params)
 end
 
 function auroras.climate_api_get_effects(params)
-    data = {}
+    local data = {}
 
     if params.player then
-        pName = params.player:get_player_name()
+        local pName = params.player:get_player_name()
         if auroras.player_data[pName] and
                 auroras.player_data[pName].current_sky then
             data["climate_api:skybox"] = {
