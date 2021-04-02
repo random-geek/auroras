@@ -178,7 +178,7 @@ function auroras.init_colors()
     if auroras.COLOR_LUT == nil then
         auroras.COLOR_LUT = {}
         local idx = 0
-        for i, hexCol in pairs(auroras.COLORS) do
+        for _, hexCol in pairs(auroras.COLORS) do
             local tCol = auroras.parse_hex_color(hexCol)
             if tCol ~= nil then
                 auroras.COLOR_LUT[idx] = tCol
